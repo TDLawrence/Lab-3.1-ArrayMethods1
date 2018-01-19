@@ -35,13 +35,12 @@ public class ArrayMethods1 {
 	 int minIndex=0;
 	  for(int n=0;n<list1.length;n++)
 		  {curmin=list1[n];
-	      minIndex=n;
+	       minIndex=n;
 	        for(int p=n+1;p<list1.length;p++)
 		    {if (curmin>list1[p])
-		    curmin=list1[p];
+		     curmin=list1[p];
 		     minIndex=p;
 		    }
-	     if(
 		 swap(list1,minIndex,n);
 	     }
 	 
