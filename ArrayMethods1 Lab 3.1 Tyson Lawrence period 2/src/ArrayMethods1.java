@@ -38,12 +38,12 @@ public class ArrayMethods1 {
 	{int swap=0;
 	 while(swap>0)
 	 {for(int n=list1.length-1;n>=0;n--)
-	  {if (list1[n]<list1[n-1])
-	    swap(list1,n,n-1);
-	    swap++;
-	   if(list1[n]==list1[n-1])
-		 n=n-1;	 
-	  }
+	   {if (list1[n]<list1[n-1])
+	     {swap(list1,n,n-1);
+	      swap++;}
+	   if(list1[n]>=list1[n-1])
+		 {n=n-1;}	 
+	   }
 		 
 	 }
 		
@@ -54,10 +54,10 @@ public class ArrayMethods1 {
 	 {for(int n=0;n<list1.length;n++)
 	   { 
 		 if ((list1[n].compareTo(list1[n+1]))>0)
-		  swap(list1,n,n+1);	
-	       swap++;
-	   if ((list1[n].compareTo(list1[n+1]))==0)
-		  n=n+1;	
+		  {swap(list1,n,n+1);	
+	       swap++;}
+	    if ((list1[n].compareTo(list1[n+1]))<=0)
+		  {n=n+1;}	
 	    }
 	 }
 		
@@ -71,8 +71,8 @@ public class ArrayMethods1 {
 	       minIndex=n;
 	        for(int p=n+1;p<list1.length;p++)
 		    {if (curmin>list1[p])
-		     curmin=list1[p];
-		     minIndex=p;
+		     {curmin=list1[p];
+		     minIndex=p;}
 		    }
 		 swap(list1,minIndex,n);
 	     }
