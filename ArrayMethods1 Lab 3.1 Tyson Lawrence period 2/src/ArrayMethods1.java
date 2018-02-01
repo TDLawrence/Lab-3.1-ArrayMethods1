@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class ArrayMethods1 {
-
+//Tyson Lawrence Lab 3.1 ArrayMethods 2/1/18
 	public static void main(String[]args)
 	{//Testing arrays
 		int[]test1= {1,4,4,5,2,4,3,17,0};
@@ -35,27 +35,23 @@ public class ArrayMethods1 {
 	
 	
 	public static void insertionSort(int[]list1)
-	{ for(int n=list1.length-1;n>0;n--)
-	   {if (list1[n]<list1[n-1])
-	     {swap(list1,n,n-1);}
-	   if(list1[n]==list1[n-1])
-		 {n=n-1;}	 
-	   
-		 
-	 }
-		
+	
+	{ for(int n=1;n<=list1.length-1;n++)	   
+	    {for (int j=n;j>0;j--)
+		   if (list1[j]<list1[j-1])
+	       {swap(list1,j,j-1); }	
+		   else {break;}
+	    }	
 	}
 	public static void bubbleSort(String[]list1)
 	{int swap=list1.length;
 	 while(swap>0)
 	 {  swap=0;
-		for(int n=0;n<list1.length;n++)
+		for(int n=0;n<list1.length-1;n++)
 	   { 
 		 if ((list1[n].compareTo(list1[n+1]))>0)
 		  {swap(list1,n,n+1);	
 	       swap++;}
-	    if ((list1[n].compareTo(list1[n+1]))<=0)
-		  {n=n+1;}	
 	    }
 	 }
 		
